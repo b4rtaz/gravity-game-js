@@ -1,0 +1,59 @@
+body, html {margin: 0; padding: 0; overflow: hidden; font: 8pt/1em Arial, Tahoma, Verdana;}
+body {cursor: default;}
+body > canvas {cursor: crosshair;}
+body {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+h1, h2, h3, h4, h5, h6, p {margin: 0; padding: 0;}
+
+#fullscreenToast {display: none; position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 10; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);}
+#fullscreenToast h5 {display: table-cell; width: 100%; height: 100%; vertical-align: middle; text-align: center; font-size: 60px; line-height: 1em; color: #FFF;}
+
+#messageToast {display: none; position: absolute; right: 50px; top: 50px; z-index: 10; text-align: right; padding: 20px; background: rgba(0, 211, 234, 0.6);}
+#messageToast h5 {font-size: 30px; line-height: 1em; color: #FFF; margin: 0; padding:0 0 20px;}
+#messageToast p {font-size: 11pt; line-height: 1.5em; color: #FFF; padding: 0 0 20px; max-width: 350px;}
+#messageToast button {margin: 0 auto; padding: 10px 20px; background: #FFF; border: 0; cursor: pointer; box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.15); transition: background 0.3s;}
+#messageToast button:hover {background: #C4FAFF;}
+
+#welcome {display: none;}
+#welcome div.levels {position: absolute; left: 50px; bottom: 50px; z-index: 9; width:360px; padding:20px; font-size: 14px;}
+#welcome div.levels:after {position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 10; display: block; content: ' '; background: #00D3EA; opacity: 0.6; filter: alpha(opacity=60);}
+#welcome div.levels h1 {position: relative; z-index: 11; text-align: center; font-size: 80px; line-height: 1.1em; color: #FFF; text-shadow: 0 0 2px #00394B, 4px 4px 0 #001C3E, -2px -2px 0 #FFD10F;}
+#welcome div.levels p {position: relative; z-index: 11; margin: 0; padding: 0; text-align: center; color: #FFF;}
+#welcome div.levels p a.fb,
+#welcome div.levels p a.pi {display: inline-block; margin: 0 2px; overflow: hidden; width: 32px; height: 32px; text-indent: -9999px; transition: opacity 0.3s;}
+#welcome div.levels p a.fb:hover,
+#welcome div.levels p a.pi:hover {opacity: 0.6; filter: alpha(opacity=60);}
+#welcome div.levels p a.fb {background: url('./fb.png') no-repeat 0 0;}
+#welcome div.levels p a.pi {background: url('./pi.png') no-repeat 0 0;}
+#welcome div.levels ul {position: relative; z-index: 11; list-style: none; margin: 0; max-height: 250px; overflow: auto; margin: 20px 0; padding: 0;}
+#welcome div.levels ul li {margin: 0; padding: 10px 15px; margin: 1px 0 0; color: #00292C; background: #FFF; transition: background 0.3s; cursor: pointer; box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.15);}
+#welcome div.levels ul li span.number {font-weight: bold; display: inline-block; padding: 5px; margin-right: 10px; color: #FFF; background: #001C3E;}
+#welcome div.levels ul li:hover {background: #C4FAFF;}
+
+#welcome div.keyboard {position: absolute; left: 500px; bottom: 50px; z-index: 9;}
+#welcome div.keyboard h5 {position: absolute; left: 0; bottom: 120px; line-height: 1.5em; font-weight: normal; white-space: pre; font-size: 9pt; color:#646464;}
+#welcome div.keyboard h5 strong {font-size: 15pt; color: #FFF; display: block; line-height: 1.5em;}
+#welcome div.keyboard span.explain {position: absolute; display: none; width:150px; padding: 10px; right: -1px; bottom: 32px; line-height: 1.5em; background: #FFF; color: #000; box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);}
+#welcome div.keyboard span.key {position: absolute; display: block; width:30px; height: 30px; color: #FFF; text-align: center; cursor: help; line-height: 2.9em; border:1px solid #FFF;}
+#welcome div.keyboard span.key:hover {border-color: #00D3EA; color: #00D3EA;}
+#welcome div.keyboard span.key:hover span.explain {display: block;}
+#welcome div.keyboard span.key.esc {bottom: 78px; left: 0;}
+#welcome div.keyboard span.key.q {bottom: 34px; left: 0;}
+#welcome div.keyboard span.key.w {bottom: 34px; left: 34px;}
+#welcome div.keyboard span.key.a {bottom: 0; left: 0;}
+#welcome div.keyboard span.key.s {bottom: 0; left: 34px;}
+#welcome div.keyboard span.key.d {bottom: 0; left: 68px;}
+#welcome div.keyboard span.key.c {bottom: 0; left: 110px;}
+#welcome div.keyboard span.mouse {position: absolute; left: 180px; bottom: -6px; width: 33px; height: 48px; cursor: help; background: url('./mouse.png') no-repeat 0 0;}
+#welcome div.keyboard span.mouse:hover span.explain {display: block; bottom: 49px;}
+
+#cockpit {position: absolute; left: 5px; bottom: 5px; display: none; z-index: 9; color: #011733;}
+#cockpit span.giroskop {display: block; position: absolute; left: 160px; bottom: 0;}
+#cockpit span.speed {position: absolute; left: 200px; bottom: 8px; color: #FFF; font-size: 16px; line-height: 1em; white-space: pre;}
+#cockpit span.fuel {position: relative; display: block; width: 150px; height: 15px; margin: 5px 0 0; background: #1A7983;}
+#cockpit span.fuel span {position: absolute; display: block;}
+#cockpit span.fuel span.fill {left: 0; top: 0; z-index: 2;  height: 15px; background: #00D3EA;}
+#cockpit span.fuel span.label {left: 5px; top: 2px; z-index: 3; display: block;}
+#cockpit span.fuel span.value {right: 5px; top: 2px; z-index: 3; display: block;}
+#cockpit span.camera {display: block; width: 30px; height: 30px; background: #1A7983; font-size: 15pt; line-height: 1.4em; text-align: center; cursor: pointer;}
+#cockpit span.camera:hover {background: #2998A2;}
+#cockpit span.camera:active {background: #21C6D8;}
