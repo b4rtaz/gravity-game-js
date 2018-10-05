@@ -103,8 +103,8 @@ class Keyboard {
   private _keysPressed: {[code:number]: number;} = {};
 
   public start(): void {
-    window.addEventListener('keydown', (e) => this.keydown(e), false);
-    window.addEventListener('keyup', (e) => this.keyup(e), false);
+    window.addEventListener('keydown', (e) => this.keydown(e), true);
+    window.addEventListener('keyup', (e) => this.keyup(e), true);
   }
 
   public stop(): void {
