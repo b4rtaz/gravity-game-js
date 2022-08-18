@@ -71,7 +71,7 @@ export class ShipObjectRenderer extends r.RendererObject {
     var circleShape = new THREE.Shape();
     circleShape.moveTo(circleRadius, 0);
     circleShape.absarc(0, 0, circleRadius, 0, Math.PI * 2, true);
-    circleShape.moveTo(circleRadius * 1.5, 0);
+    circleShape.lineTo(circleRadius * 1.5, 0);
 
     var circlePoints = circleShape.createPointsGeometry(20);
     this._circle = new THREE.Line(circlePoints, new THREE.LineBasicMaterial({
