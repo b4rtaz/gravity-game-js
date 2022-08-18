@@ -18,11 +18,8 @@ h1, h2, h3, h4, h5, h6, p {margin: 0; padding: 0;}
 #welcome div.levels:after {position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 10; display: block; content: ' '; background: #00D3EA; opacity: 0.6; filter: alpha(opacity=60);}
 #welcome div.levels h1 {position: relative; z-index: 11; text-align: center; font-size: 80px; line-height: 1.1em; color: #FFF; text-shadow: 0 0 2px #00394B, 4px 4px 0 #001C3E, -2px -2px 0 #FFD10F;}
 #welcome div.levels p {position: relative; z-index: 11; margin: 0; padding: 0; text-align: center; color: #FFF;}
-#welcome div.levels p a.fb,
 #welcome div.levels p a.pi {display: inline-block; margin: 0 2px; overflow: hidden; width: 32px; height: 32px; text-indent: -9999px; transition: opacity 0.3s;}
-#welcome div.levels p a.fb:hover,
 #welcome div.levels p a.pi:hover {opacity: 0.6; filter: alpha(opacity=60);}
-#welcome div.levels p a.fb {background: url('./fb.png') no-repeat 0 0;}
 #welcome div.levels p a.pi {background: url('./pi.png') no-repeat 0 0;}
 #welcome div.levels ul {position: relative; z-index: 11; list-style: none; margin: 0; max-height: 250px; overflow: auto; margin: 20px 0; padding: 0;}
 #welcome div.levels ul li {margin: 0; padding: 10px 15px; margin: 1px 0 0; color: #00292C; background: #FFF; transition: background 0.3s; cursor: pointer; box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.15);}

@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
-        "module": "amd",
+        "module": "commonjs",
         "target": "es5",
         "noImplicitAny": false,
         "sourceMap": false,
         "outDir": "build",
-        "moduleResolution": "classic"
+        "moduleResolution": "node",
+		"rootDir": "src"
     },
     "exclude": [
         "node_modules"
