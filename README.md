@@ -1,4 +1,4 @@
-![Gravity Game JS](.github/cover.png)
+![Gravity Game JS](.github/cover.jpg)
 
 # Gravity Game JS
 
